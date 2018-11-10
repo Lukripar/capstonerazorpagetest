@@ -1,0 +1,10 @@
+﻿@page "/stores/{id:int}"
+@model RazorPagesSample.Web.Pages.Stores.StoreDetailsModel
+@{
+    ViewData["Title"] = "StoreDetails";
+}
+
+<h2>Store Details</h2>
+
+<h3>Address is: @Model.Store.Address</h3>
+

@@ -1,0 +1,28 @@
+﻿@page
+@model RazorPagesSample.Web.Pages.Stores.IndexModel
+@{
+    ViewData["Title"] = "Store List";
+}
+
+<h2>All Stores</h2>
+
+<table class="table table-condensed table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Address</th>
+        <th># Workers</th>
+        <th># Products</th>
+        <th></th>
+    </tr>
+    @foreach (var store in Model.Stores)
+    {
+        <tr>
+            <td>@store.Id</td>
+            <td>@store.Address</td>
+            <td>@store.Workers.Count()</td>
+            <td>@store.ProductCatalog.Count()</td>
+            <td><a href="Stores/@store.Id">Details</a></td>
+        </tr>
+    }
+</table>
+
